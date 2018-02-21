@@ -26,6 +26,11 @@
             "Tests\\": "tests/"
         }
     },
+    "autoload": {
+        "psr-4": {            
+            "simplon\\": "src/"
+        }
+    },
     "config": {
         "process-timeout" : 0
     },

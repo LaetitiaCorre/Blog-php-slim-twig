@@ -28,6 +28,34 @@
     <body>
         <h1>Slim</h1>
         <div>a microframework for PHP</div>
+
+        <form action="/login" method="POST">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="youremail@gmail.com" required>
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" id="password" placeholder="password" required>
+            <input type="submit" value="submit">
+          </form>
+
+        <form action="/adduser" method="POST">
+            <label for="name">FirstName</label>
+            <input type="text" name="name" id="name" placeholder="enter your name" required>
+            <label for="surname">Surname</label>
+            <input type="text" name="surname" id="surname" placeholder="enter your surname " required>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="youremail@gmail.com" required>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="password" required>
+            
+            <input type="submit" value="submit">
+        </form>
+
+
+
+        {% if newId %}
+        <p>You successfuly added a new person with id {{newId}}</p>
+        {% endif %}
+
         {% if args['name'] is defined %}
           <h2>Hello {{ args['name']|escape }} !</h2>
         {% else %}
